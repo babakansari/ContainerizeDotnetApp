@@ -7,8 +7,13 @@ namespace TestsInDocker
     {
         static async Task Main(string[] args)
         {
-            var counter = 0;
             var max = args.Length != 0 ? Convert.ToInt32(args[0]) : -1;
+            await RunCounter(max);
+        }
+
+        public static async Task RunCounter(int max)
+        {
+            var counter = 0;
             while (max == -1 || counter < max)
             {
                 Console.WriteLine($"Counter: {++counter}");
