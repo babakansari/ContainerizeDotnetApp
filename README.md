@@ -20,6 +20,11 @@ It runs the following dotnet command:
 - *NOTE:* The following command is to run NOT self-contained dotnet core app. We installed dotnet core in the container to use it for running the tests:
 `dotnet TestsInDocker.dll`
 
-## MS Test
+## Unit Tests
+## Using MS Test
 - Publish the assemblies, build image and then run the tests:
 `sudo dotnet test TestsInDocker.MSTest.dll -v n`
+
+## Using NUnit Test
+- Publish the assemblies, build image and then run the tests:
+`sudo dotnet test TestsInDocker.NUnit.dll -v n`

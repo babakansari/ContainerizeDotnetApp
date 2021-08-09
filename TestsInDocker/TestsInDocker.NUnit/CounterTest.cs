@@ -1,12 +1,16 @@
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
-namespace TestsInDocker.MSTest
+namespace TestsInDocker.NUnit
 {
-    [TestClass]
     public class CounterTest
     {
-        [TestMethod]
+        [SetUp]
+        public void Setup()
+        {
+        }
+
+        [Test]
         public void TestCounter()
         {
             // Arrange
