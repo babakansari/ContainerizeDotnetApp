@@ -1,24 +1,20 @@
 ﻿using System;
-using System.Threading.Tasks;
 
 namespace TestsInDocker
 {
-    class Program
+    internal class Program
     {
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
             var max = args.Length != 0 ? Convert.ToInt32(args[0]) : -1;
-            await RunCounter(max);
+            foreach (var countStr in Counter.RunCounter(max))
+            {
+                Console.WriteLine(countStr);
+            }
+
+           
         }
 
-        public static async Task RunCounter(int max)
-        {
-            var counter = 0;
-            while (max == -1 || counter < max)
-            {
-                Console.WriteLine($"Counter: {++counter}");
-                await Task.Delay(1000);
-            }
-        }
+        
     }
 }

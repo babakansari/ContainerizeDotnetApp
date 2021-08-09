@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GeneralFiles", "GeneralFile
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestsInDocker.MSTest", "TestsInDocker.MSTest\TestsInDocker.MSTest.csproj", "{75797121-3DD6-4ED3-AC9D-C363884C4107}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2FA8944C-7E48-4110-A9F8-07290EF1249E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FA8944C-7E48-4110-A9F8-07290EF1249E}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{2FA8944C-7E48-4110-A9F8-07290EF1249E}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{75797121-3DD6-4ED3-AC9D-C363884C4107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75797121-3DD6-4ED3-AC9D-C363884C4107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75797121-3DD6-4ED3-AC9D-C363884C4107}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{75797121-3DD6-4ED3-AC9D-C363884C4107}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
