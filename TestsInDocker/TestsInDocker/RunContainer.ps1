@@ -1,0 +1,1 @@
+docker run -d -v /dev/shm:/dev/shm testsindocker
