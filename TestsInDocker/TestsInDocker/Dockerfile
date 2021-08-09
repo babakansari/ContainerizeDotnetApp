@@ -23,6 +23,7 @@ WORKDIR /usr/src
 COPY ["./TestsInDocker/bin/Release/net5.0/ubuntu.16.04-x64/publish/**", "."]
 COPY ["./TestsInDocker.MSTest/bin/Release/net5.0/ubuntu.16.04-x64/publish/**", "."]
 COPY ["./TestsInDocker.NUnit/bin/Release/net5.0/ubuntu.16.04-x64/publish/**", "."]
+COPY ["./TestsInDocker.NUnit.UIAutomation/bin/Release/net5.0/ubuntu.16.04-x64/publish/**", "."]
 
 # This step is not neccessary as dotnet automatically mark the TestsInDocker file as executable
 RUN sudo chmod 777 ./TestsInDocker

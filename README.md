@@ -21,10 +21,14 @@ It runs the following dotnet command:
 `dotnet TestsInDocker.dll`
 
 ## Unit Tests
-## Using MS Test
-- Publish the assemblies, build image and then run the tests:
+### Using MS Test
+- Publish TestsInDocker.MSTest assemblies, build image and then run the tests:
 `sudo dotnet test TestsInDocker.MSTest.dll -v n`
 
-## Using NUnit Test
-- Publish the assemblies, build image and then run the tests:
+### Using NUnit Test
+- Publish TestsInDocker.NUnit assemblies, build image and then run the tests:
 `sudo dotnet test TestsInDocker.NUnit.dll -v n`
+
+## UI Automation Tests
+- Publish TestsInDocker.NUnit.UIAutomation assemblies, build image and then run the tests:
+`sudo dotnet test TestsInDocker.NUnit.UIAutomation.dll -v n`
