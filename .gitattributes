@@ -1,2 +1,22 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+*.suo
+*.user
+*.ReSharper
+*.DotSettings
+*.vs10x
+.vs/
+.sonarqube/
+_Resharper.*
+_ReSharper.*
+Parser.lst
+.*.sw*
+*.*~
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*.log
+*.dll
+bin
+Bin
+obj
+.gitk-tmp.*/
+.gitignore
