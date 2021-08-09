@@ -1,1 +1,0 @@
-dotnet publish -c Release --force --self-contained --runtime ubuntu.16.04-x64
