@@ -6,11 +6,22 @@ WORKDIR /app
 LABEL maintainer="Containerize_Tests"
 MAINTAINER Babak Ansari<babakansari@hotmail.com>
 
+# Install dotnet 5.0 from https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu into the image
+RUN wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+RUN sudo dpkg -i packages-microsoft-prod.deb
+RUN rm packages-microsoft-prod.deb
+
+RUN sudo apt-get update; \
+  sudo apt-get install -y apt-transport-https && \
+  sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-5.0
+
 # You could install Tree view in bash to use `tree` bash commad
 # RUN sudo apt-get install tree
 
 WORKDIR /usr/src
 COPY ["./TestsInDocker/bin/Release/net5.0/ubuntu.16.04-x64/publish/**", "."]
+COPY ["./TestsInDocker.MSTest/bin/Release/net5.0/ubuntu.16.04-x64/publish/**", "."]
 
 # This step is not neccessary as dotnet automatically mark the TestsInDocker file as executable
 RUN sudo chmod 777 ./TestsInDocker

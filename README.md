@@ -3,7 +3,9 @@
 This is sample project to demonstrate how to run dotnet core Console App, create Unit Tests and Automation Tests inside an Ubuntu docker container
 
 ## Console App
-- First create a self contained App (so you won't need to install dotnet core on the container) after your code changes:
+- Let''s create a self contained App (Useful when you won't need to install dotnet core on the container) after your code changes:
+`./PublichToUbuntu.ps1` 
+It runs the following dotnet command:
 `dotnet publish -c Release --force --self-contained --runtime ubuntu.16.04-x64`
 
 - Next execute the `Dockerfile` to build the image. Optionally, you could use Visual Studio support for docker instead of `docker build` command. 
@@ -11,12 +13,13 @@ This is sample project to demonstrate how to run dotnet core Console App, create
 - Run the container by the following command shell script once image is created:
 `.\RunContainer.ps1`
 
-- The following command is to run the self-contained app created:
+- The following command could be used to run the self-contained app created:
 `./TestsInDocker`
 
 
-- *NOTE:* The following command is to run NOT self-contained dotnet core app (The docker image here is self-contained):
+- *NOTE:* The following command is to run NOT self-contained dotnet core app. We installed dotnet core in the container to use it for running the tests:
 `dotnet TestsInDocker.dll`
 
-
- 
+## MS Test
+- Publish the assemblies, build image and then run the tests:
+`sudo dotnet test TestsInDocker.MSTest.dll -v n`
