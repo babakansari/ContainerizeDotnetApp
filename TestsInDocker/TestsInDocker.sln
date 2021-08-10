@@ -8,7 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GeneralFiles", "GeneralFiles", "{68093E07-0310-402C-ACED-D913AD26697B}"
 	ProjectSection(SolutionItems) = preProject
 		.dockerignore = .dockerignore
-		PublichToUbuntu.ps1 = PublichToUbuntu.ps1
+		PublichForUbuntu.ps1 = PublichForUbuntu.ps1
 		..\README.md = ..\README.md
 		RunContainer.ps1 = RunContainer.ps1
 	EndProjectSection

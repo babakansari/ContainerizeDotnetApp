@@ -15,15 +15,14 @@ namespace SeleniumTestsOnContainers
         [SetUp]
         public void TestInitialize()
         {
-
+            Console.WriteLine(@">>>>>>>>>>>>   Initiate Chrome Driver <<<<<<<<<<<<<<<");
             Environment.SetEnvironmentVariable("webdriver.chrome.driver", @"/usr/bin/chromedriver");
             ChromeOptions chromeOptions = new ChromeOptions();
-            // chromeOptions.AddArguments("--headless");
+            chromeOptions.AddArguments("--headless");
             chromeOptions.AddArguments("--no-sandbox");
 
             _driver = new ChromeDriver(chromeOptions);
 
-            Console.WriteLine(@">>>>>>>>>>>>   /usr/bin/chromedriver <<<<<<<<<<<<<<<");
         }
 
         [Test]
