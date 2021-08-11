@@ -15,6 +15,7 @@ Parser.lst
 *.REMOTE.*
 *.log
 bin
-Bin
 obj
+Published
+Publish
 .gitk-tmp.*/
