@@ -1,10 +1,11 @@
 # Containerize Simple Dotnet Core App in Ubuntu container
 
-This is sample project to demonstrate how to run dotnet core Console App, create Unit Tests and Automation Tests inside an Ubuntu docker container
+This is sample project to demonstrate how to run dotnet core Console App, create Unit Tests and Automation Tests inside an Ubuntu docker container. 
+Please note that only one Docker Image is used for this experiment for demonstration purpose and is not a recommended practice. 
 
 ## Console App
 - Let''s create a self contained App (Useful when you won't need to install dotnet core on the container) after your code changes:
-`./PublichToUbuntu.ps1` 
+`./PublichForUbuntu.ps1` 
 It runs the following dotnet command:
 `dotnet publish -c Release --force --self-contained --runtime ubuntu.16.04-x64`
 
@@ -32,3 +33,6 @@ It runs the following dotnet command:
 ## UI Automation Tests
 - Publish TestsInDocker.NUnit.UIAutomation assemblies, build image and then run the tests:
 `sudo dotnet test TestsInDocker.NUnit.UIAutomation.dll -v n`
+
+- Following URL could be used to intract with browsers in the container:
+http://localhost:4444/wd/hub
