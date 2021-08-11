@@ -34,7 +34,7 @@ namespace TestsInDocker.NUnit.UIAutomation
         }
 
         [Test]
-        public void PageLive_Test()
+        public void Remote_Test_Execution()
         {
             _driver.Manage().Window.Maximize();
             _driver.Navigate().GoToUrl("https://www.google.com/search?q=babak+ansari+toronto");
