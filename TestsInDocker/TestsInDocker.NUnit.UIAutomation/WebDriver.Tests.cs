@@ -18,12 +18,14 @@ namespace TestsInDocker.NUnit.UIAutomation
         [SetUp]
         public void TestInitialize()
         {
+            Console.WriteLine(@">>>>>>>>>>>>   Initiate Web Driver <<<<<<<<<<<<<<<");
             var options = new ChromeOptions();
+            //options.AddArguments("--headless");
             //options.AddArguments("--incognito");
             //options.AddUserProfilePreference("download.default_directory", @"D:\tmp");
             //options.AddUserProfilePreference("download.prompt_for_download", false);
             //options.AddUserProfilePreference("disable-popup-blocking", "true");
-            //chrome_options.add_argument('--disable-dev-shm-usage')
+            options.AddArguments("--disable-dev-shm-usage");
 
             // To run tests on your local machine web driver
             // var driver = new ChromeDriver("../../../chromedriver78/", options);

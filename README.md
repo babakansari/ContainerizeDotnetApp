@@ -7,7 +7,7 @@ Please note that only one Docker Image is used for this experiment for demonstra
 - Let''s create a self contained App (Useful when you won't need to install dotnet core on the container) after your code changes:
 `./PublichForUbuntu.ps1` 
 It runs the following dotnet command:
-`dotnet publish -c Release --force --self-contained --runtime ubuntu.16.04-x64`
+`dotnet publish -c Release --force --no-self-contained --runtime ubuntu.16.04-x64`
 
 - Next execute the `Dockerfile` to build the image. Optionally, you could use Visual Studio support for docker instead of `docker build` command. 
 
@@ -36,3 +36,5 @@ It runs the following dotnet command:
 
 - Following URL could be used to intract with browsers in the container:
 http://localhost:4444/wd/hub
+
+sudo dotnet test TestsInDocker.NUnit.UIAutomation.dll -v n -- RunConfiguration.remoteWebDriverUrl="http://localhost:4444/wd/hub"
