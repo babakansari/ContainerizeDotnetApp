@@ -5,7 +5,7 @@ using OpenQA.Selenium.Chrome;
 namespace SeleniumTestsOnContainers
 {
     [TestFixture]
-    public class SeleniumTests
+    public class ChromeDriverTests
     {
         private ChromeDriver _driver;
         public TestContext TestContext { get; set; }
