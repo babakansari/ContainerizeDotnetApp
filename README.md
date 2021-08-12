@@ -36,5 +36,5 @@ It runs the following dotnet command:
 
 - Following URL could be used to intract with browsers in the container:
 http://localhost:4444/wd/hub
-
+More verbus call to run the Automation tests
 sudo dotnet test TestsInDocker.NUnit.UIAutomation.dll -v n -- RunConfiguration.remoteWebDriverUrl="http://localhost:4444/wd/hub"
