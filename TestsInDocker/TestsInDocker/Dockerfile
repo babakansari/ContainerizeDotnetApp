@@ -9,9 +9,9 @@ MAINTAINER Babak Ansari<babakansari@hotmail.com>
 # Install dotnet 5.0 from https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu into the image
 # FROM mcr.microsoft.com/dotnet/sdk:5.0
 
-RUN wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-RUN sudo dpkg -i packages-microsoft-prod.deb
-RUN rm packages-microsoft-prod.deb
+RUN wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb &&\
+	sudo dpkg -i packages-microsoft-prod.deb  &&\
+	rm packages-microsoft-prod.deb
 
 RUN sudo apt-get update; \
   sudo apt-get install -y apt-transport-https && \
