@@ -23,10 +23,8 @@ RUN sudo apt-get update; \
 # RUN sudo apt-get install tree
 
 WORKDIR /usr/src
-COPY ["./Published/**", "."]
-
-# This step is not neccessary as dotnet automatically mark the TestsInDocker file as executable
-RUN sudo chmod 777 ./TestsInDocker
+#COPY ["./Published/**", "."]
+VOLUME "/usr/src"
 
 # The following executes the counter program inside the console commad
 # CMD ["./TestsInDocker"]
