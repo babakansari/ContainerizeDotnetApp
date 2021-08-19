@@ -16,10 +16,19 @@ namespace TestsInDocker.NUnit.UIAutomation
         public void TestInitialize()
         {
             Console.WriteLine(@">>>>>>>>>>>>   Initiate Chrome Driver <<<<<<<<<<<<<<<");
-            Environment.SetEnvironmentVariable("webdriver.chrome.driver", @"/usr/bin/chromedriver");
+            //Environment.SetEnvironmentVariable("webdriver.chrome.driver", @"/usr/bin/chromedriver");
             var chromeOptions = new ChromeOptions();
             //chromeOptions.AddArguments("--headless");
             chromeOptions.AddArguments("--no-sandbox");
+
+            chromeOptions.AddUserProfilePreference("download.prompt_for_download", false);
+            chromeOptions.Proxy = null;
+            //chromeOptions.AddArgument("--start-maximized");
+
+            chromeOptions.AddArgument("--disable-infobars");
+            chromeOptions.AddUserProfilePreference("credentials_enable_service", false);
+            chromeOptions.AddUserProfilePreference("password_manager_enabled", false);
+
 
             _driver = new ChromeDriver(chromeOptions);
 
