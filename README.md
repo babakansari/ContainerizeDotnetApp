@@ -1,4 +1,4 @@
-# Containerize Simple Dotnet Core App for Ubuntu
+# Containerize Simple Dotnet Core App on Ubuntu
 
 This is sample project to demonstrate how to run dotnet core Console App, create Unit Tests and Automation Tests inside an Ubuntu docker container. 
 Please note that only one Docker Image is used for this experiment for demonstration purpose and is not a recommended practice. 
