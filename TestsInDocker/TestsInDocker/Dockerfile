@@ -20,11 +20,15 @@ RUN sudo apt-get update; \
   sudo apt-get install -y dotnet-sdk-5.0
 
 # You could install Tree view in bash to use `tree` bash commad
-# RUN sudo apt-get install tree
+#RUN sudo apt-get install tree
 
 WORKDIR /usr/src
-#COPY ["./Published/**", "."]
+
+# Reference published binaries in the container
 VOLUME "/usr/src"
+
+# Published binaries could also be pushed to the container
+#COPY ["./Published/**", "."]
 
 # The following executes the counter program inside the console commad
 # CMD ["./TestsInDocker"]
